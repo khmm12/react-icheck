@@ -105,6 +105,9 @@ class EnhancedSwitch extends React.Component {
     insert: React.PropTypes.node,
 
     children: React.PropTypes.node,
+
+    // class added for outer label
+    labelClassName: React.PropTypes.string,
   };
 
   static defaultProps = {
@@ -473,6 +476,7 @@ class EnhancedSwitch extends React.Component {
       onMouseOut: handleLabelEvent.bind(this),
       onTouchStart: handleLabelEvent.bind(this),
       onTouchEnd: handleLabelEvent.bind(this),
+      className: this.props.labelClassName,
     };
 
     return (
